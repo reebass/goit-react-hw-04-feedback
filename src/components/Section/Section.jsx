@@ -10,7 +10,7 @@ export const Section = ({title, children}) => (
   </section>
 ) 
 
-Event.PropTypes = {
+Section.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.object.isRequired,
 }

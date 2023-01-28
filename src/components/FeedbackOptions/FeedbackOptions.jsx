@@ -10,7 +10,7 @@ export const FeeadbackOptions = ({options, onLeaveFeedback}) => (
           type="button"
           key={feedback}
           id={feedback}
-          onClick={onLeaveFeedback}
+          onClick={() => onLeaveFeedback(feedback)}
         >
           {feedback}
         </Button>
@@ -19,7 +19,7 @@ export const FeeadbackOptions = ({options, onLeaveFeedback}) => (
 ) 
 
 
-Event.PropTypes = {
+FeeadbackOptions.propTypes = {
   options: PropTypes.array.isRequired,
-  onLeaveFeedback: PropTypes.func.isRequired,
+  onLeaveFeedback: PropTypes.func,
 }

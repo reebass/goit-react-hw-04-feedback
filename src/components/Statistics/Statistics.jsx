@@ -14,18 +14,18 @@ export const Statistics = ({good, neutral, bad, total, positivePercentage}) => (
               <Stats>Bad:</Stats><Value>{bad}</Value>
             </Item>
             <Item>
-              <Stats>Total:</Stats><Value>{total()}</Value>
+              <Stats>Total:</Stats><Value>{total}</Value>
             </Item>
             <Item>
-              <Stats>Positive feedback:</Stats><Value>{positivePercentage()}%</Value>
+              <Stats>Positive feedback:</Stats><Value>{positivePercentage}%</Value>
             </Item>
           </List>
 )
 
-Event.PropTypes = {
+Statistics.propTypes = {
   good: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
   bad: PropTypes.number.isRequired,
-  total: PropTypes.func.isRequired,
-  positivePercentage: PropTypes.func.isRequired
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.string.isRequired
 }
